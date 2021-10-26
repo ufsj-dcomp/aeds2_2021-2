@@ -1,15 +1,17 @@
+#ifndef ARVORE_H
+#define ARVORE_H
 
 struct no{
   struct no *esq;
   struct no *dir;
   int chave;
-}
+};
 
 typedef struct no No;
 
 struct arvore{
   No *raiz;
-}
+};
 
 typedef struct arvore Arvore;
 
@@ -24,3 +26,5 @@ void pre_ordem(No*);
 void pos_ordem(No*);
 void ordem_central(No*);
 void destroi(No*);
+
+#endif
