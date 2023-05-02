@@ -9,7 +9,8 @@ struct fita{
 struct controlador{
     int *mem_principal;
     struct fita *fitas;
-    int fita_atual;
+    int fita_parte1;
+    int fita_parte2;
     int tamanho_memoria;
     int num_elementos;
     int num_fitas;
@@ -17,7 +18,7 @@ struct controlador{
 
 typedef struct fita Fita;
 typedef struct controlador Controlador;
-
-Controlador *cria_controlador(int tamanho_memoria);
+Controlador* cria_controlador(int tam);
 void ordenacao_inicial(char *arquivo_entrada, Controlador *c);
-void intercalacao(Controlador *c);
+void intercalacao(Controlador* c);
+
